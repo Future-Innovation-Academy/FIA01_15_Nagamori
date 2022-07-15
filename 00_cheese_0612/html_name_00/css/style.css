@@ -1,0 +1,499 @@
+/* ここから下に記載していく */
+/* body {
+    color: #000;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+} */
+body {
+    display: block;
+    margin: 8px;
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+/* ロゴ */
+.logo {
+    padding: 10px 0px;
+    /* align-items: center;
+        justify-content: center; */
+    /* position: relative;
+        */
+    float: left;
+}
+
+/* ロゴの横のリスト */
+.note_wrap {
+    /* float: right; */
+    /* これからはFloatでなくてdisplay:flex */
+    display: flex;
+    padding: 50px 20px;
+}
+
+.nav-item {
+    /* Wrapperのなかで２０％ */
+    width: 20%;
+    text-align: center;
+}
+
+/* .clearfix:after {
+            content: '';
+    display: table;
+    clear: both;
+} */
+/* .inner { */
+/* width: 100%;
+    margin: 0 auto; */
+/* float: left; */
+/* } */
+
+
+/* 背景写真 */
+.backimage {
+    background: url(../img/mainbg.png);
+    /* background-size: 100% 100%; */
+    /* ↓つけたし */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    /* background-size: 1365px 500px; */
+    /* width: 100%; */
+    height: 300px;
+    /* -webkit-animation: IndexPortfolio_portfolio-slide__jZhhw 40s linear infinite;
+        animation: IndexPortfolio_portfolio-slide__jZhhw 40s linear infinite;
+        margin: 1rem 0; */
+}
+
+
+/* 写真の上のフォント */
+.catch {
+    /* 中央ぞろえこれでいいんかな↓ */
+    padding: 100px 0 100px;
+    font-size: 24px;
+    line-height: 2;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#main_visual {
+    /* 写真の下にちょっと色つけてみたかった */
+    padding-bottom: 10px;
+    background: #ffd61a;
+}
+
+/* 繰り返し使う見出し */
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* 見出しのうち黄色いやつ */
+.font-yellow {
+    color: #ffd61a;
+    font-weight: bold;
+}
+
+/* 繰り返しつかう見出しのクラス */
+.plain-class {
+    margin: 60px 0 50px
+        /* margin: 3rem 0 2.5rem */
+}
+
+.plain-text {
+    /* ここにPaddingつけてしまった　まあこれでいいのか */
+    padding-top: 20px;
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+}
+
+/* 謎の４連続写真 */
+.container1 {
+    display: block;
+    /* margin: 10px 10px; */
+    /* margin: 0 auto; */
+    /* max-width: 800px; */
+    /* padding: 0 2.0rem; */
+    width: 100%;
+    /*幅を指定*/
+    /* position: relative; */
+}
+
+/* 写真の幅を全体の４分の１ずつにする */
+.quote {
+    width: 25%;
+}
+
+.row {
+    /* display: block; */
+    /* display: inline-block; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* padding: 10px;
+    position: min-content */
+    width: 100%;
+    /* max-width: 800px; */
+}
+/* いろいろこねくり回したが１行だけ・・・ */
+.col {
+    display: flex;
+    /* width: 100%; */
+    /* float: left; */
+    /* 
+        padding-bottom: 60px;
+    display: inline-block; */
+    /* flex: 1 1 auto;
+    margin-left: 10px;
+    max-width: 100%;
+    width: 100%; */
+}
+
+/* 2段写真　左側 */
+@media (min-width: 992px) {
+    .wrapper .container-img .content {
+        /* .wrapper .container-img .content .content-right { */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fafafa;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper .content-item {
+        width: 50%;
+    }
+}
+
+/* PC時のみ順番を入れ替える */
+/* @media (min-width: 300px) {
+    .wrapper .content-right {
+        flex-direction:row-reverse;
+    }
+} */
+.wrapper .image {
+    display: block;
+    width: 100%;
+    /* max-width:100%; */
+    margin: 0px auto;
+}
+
+/* 2段写真のテキスト */
+.wrapper .text {
+    padding: 50px;
+}
+
+.wrapper .text .heading {
+    margin: 0px 0px 40px 0px;
+    /* margin:0px 0px 40px 0px; */
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* 2段写真　右側 */
+/* container */
+.right {
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.right .container-img {
+    /* max-width:1000px; */
+    /* width:100%; */
+    margin: 0px auto;
+    /* padding:80px 0px; */
+}
+
+/* content */
+@media (min-width: 992px) {
+    .right .container-img .content-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+/* PC時のみ順番を入れ替える */
+@media (min-width: 992px) {
+    .right .content-right {
+        flex-direction: row-reverse;
+    }
+}
+
+.right .content-item {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .right .content-item {
+        width: 50%;
+    }
+}
+
+.right .image {
+    display: block;
+    width: 100%;
+    /* max-width:100%; */
+    margin: 0px auto;
+}
+
+.right .text {
+    padding: 50px;
+}
+
+.right .text .heading {
+    margin: 0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* NEWS */
+/* container */
+.news {
+    width: 100%;
+}
+
+.news .container {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 40px 0 40px 0;
+}
+
+/* content */
+.news .content .heading {
+    margin: 0px 0px 40px 0px;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .news .content .list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.news .content .list-item {
+    margin: 0px 0px;
+    padding: 30px 0px 30px 0px;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .news .content .list-item {
+        margin: 0px;
+        width: calc(100% / 3);
+    }
+}
+
+.news .content .list-item .image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0px auto 20px auto;
+    border-radius: 0%;
+}
+
+.news .content .list-item .text {
+    line-height: 1.8rem;
+    font-size: 0.8rem;
+    color: #bfbfbf;
+    margin: 0 15px 0 15px;
+}
+
+.list-item:hover {
+    background-color: #59b1eb;
+}
+
+/* ボタン */
+.button {
+    /* position: relative; */
+    width: 200px;
+    padding: .7rem;
+    border: 2px solid #ffd61a;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* transition: .15s; */
+    color: #fff;
+    background-color: #ffd61a;
+    /* 中央ぞろえ */
+    margin: auto;
+}
+/* きもさを演出する水色 */
+.button:hover {
+    background-color: #59b1eb;
+}
+
+.button.button-submit {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.map {
+    padding: 50px 50px 50px 50px;
+}
+
+.necessary {
+    color: #fff;
+    background: #fb3b6f;
+    display: inline-block;
+    padding: 2px 5px;
+    font-size: 10px;
+    font-size: 1rem;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    /* position: absolute;
+    right: 16px;
+    top: 19px; */
+}
+
+
+/* contact */
+.contact {
+    padding: 0px 0 64px;
+}
+
+.form-wrapper {
+    max-width: 560px;
+    /* 中央ぞろえできる */
+    margin: auto;
+}
+
+.form-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 70px 0 30px;
+    border-top: solid 1px #bfbfbf;
+    border-bottom: solid 1px #bfbfbf;
+}
+
+.form-title {
+    width: 30%;
+    /* margin: 0 20px 0 0; */
+    font-weight: bold;
+    text-align: right;
+    /* 中央ぞろえできず */
+    /* margin:auto; */
+    padding: 8px 64px 8px 8px;
+    border-top: solid 1px #bfbfbf;
+    border-bottom: solid 1px #bfbfbf;
+    border-right: solid 2px #bfbfbf;
+    /* border-right-width: 20px; */
+}
+
+.form-item {
+    padding: 8px;
+    width: 53.6%;
+    /* margin: 0 0 0 32px; */
+    border-top: solid 1px #bfbfbf;
+    border-bottom: solid 1px #bfbfbf;
+}
+
+.form-parts {
+    box-sizing: border-box;
+    border: solid 1px #c9c9c9;
+    /* font-size: 1.6rem; */
+    width: 100%;
+    padding: 8px;
+}
+/* チェックボックスにCSS入れるのもだるいので自分はフレームワーク使いたい */
+
+input[type*="checkbox"] {
+    /* appearance: none;
+    -webkit-appearance: none; */
+    padding: 24px;
+    width: 16px;
+    height: 16px;
+    /* opacity: 0; */
+}
+
+input[type*="checkbox"]:checked {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: solid 1px #59b1eb;
+    content: '';
+    /* padding: 24px; */
+}
+/* input[type=checkbox]:checked + .checkbox::after {
+    opacity: 1;
+} */
+input[type=checkbox]:checked + .checkbox::after {
+/* input[type="checkbox"]:checked + label:after { */
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* .form {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+} */
+
+/* dl {
+    color: red;
+    text-align: right;
+}
+
+dt {
+    color: red;
+    text-align: right;
+} */
+
+/* form > div input[type=text], form > div input[type=email], form > div textarea, form > div select {
+    display: block;
+    min-width: 405px;
+    max-width: 405px;
+    float: right;
+    height: 38px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin: 0 15px;
+} */
+/* body > div label {
+    margin-bottom: 0;
+    text-align: right;
+    width: 145px;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+} */
