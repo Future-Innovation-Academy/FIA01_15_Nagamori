@@ -115,6 +115,7 @@ function App() {
     // alert(1); // 記述後、送信ボタンを押す→画面に変化があればコメントアウトしましょう🤗
 
     // firebaseへの登録の処理
+    console.log('addはじめ')
     await addDoc(
       collection(db, "group"), //場所どこ？
       {
@@ -124,7 +125,8 @@ function App() {
         note: noteValue,
         // selected: selectedValue,
       }
-    );
+      );
+      console.log('addおわり')
 
     // 文字を空にします🤗
     setTitleValue("");
