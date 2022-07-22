@@ -118,7 +118,6 @@ function App() {
           {/* メモ */}
           <FormHelperText id="outlined-note-helper-text">メモ</FormHelperText>
           <OutlinedInput
-            required
             value={note}
             onChange={(e) => setNote(e.target.value)}
             aria-describedby="outlined-note-helper-text"
@@ -152,9 +151,9 @@ function App() {
       {data.map((item, index) => (
         <div key={index} className="noteSet">
           <Stack direction="row" spacing={1}>
-            <Item>{item.id}セットめ</Item>
-            <Item>重さ: {item.title}</Item>
-            <Item>回数: {item.email}</Item>
+            <Item>{item.id + 1}セットめ</Item>
+            <Item>重さ: {item.weight}</Item>
+            <Item>回数: {item.rep}</Item>
             <Item>メモ: {item.note}</Item>
             <button type="submit" onClick={() => handleDelete(item.id)}>このセットを削除</button>
           </Stack>
